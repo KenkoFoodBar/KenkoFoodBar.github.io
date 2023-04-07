@@ -359,14 +359,20 @@ img{
 .menu__name, .menu__preci{
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
-}
+} 
 
 .menu__name{
   font-size: var(--normal-font-size);
 }
 
-.menu__detail, .menu__preci{
-  font-size: var(--small-font-size);
+.menu__detail{
+  font-size: x-small;
+}
+
+.menu__preci{
+  font-size: smaller;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
 }
 
 .menu__detail{
@@ -559,6 +565,8 @@ img{
   .app__container{
     column-gap: 7rem;
   }
+
+  
 }
 
 /* For tall screens on mobiles y desktop*/
@@ -566,4 +574,14 @@ img{
     .home__container {
         height: 640px;
     }
+
+}
+@media only screen and (max-width: 600px) {
+  .menu__container{
+    display: grid;
+  }  
+  .home__img{
+    width: 200px;
+    height: auto;
+  }
 }
