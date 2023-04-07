@@ -579,7 +579,12 @@ img{
 @media only screen and (max-width: 600px) {
   .menu__container{
     display: grid;
-  }  
+  }
+  
+  .bd-grid{
+    display: grid;
+  }
+
   .home__img{
     width: 200px;
     height: auto;
