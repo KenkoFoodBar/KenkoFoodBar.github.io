@@ -13,6 +13,21 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
+
+// Créer le loader
+const loader = document.createElement('div');
+loader.classList.add('loader');
+
+// Ajouter le loader à la page
+document.body.appendChild(loader);
+
+// Masquer le loader après le chargement de la page
+window.addEventListener('load', function() {
+  const loaderContainer = document.getElementById('loader-container');
+  loaderContainer.style.display = 'none';
+});
+
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
