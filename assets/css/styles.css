@@ -64,7 +64,8 @@ html{
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --title-color: #2F81F0;
+  --first-color: #2F81F0;
+  --title-color: #393939;
   --text-color: #C7D1CC;
   --body-color: #1D2521;
   --container-color: #27302C;
