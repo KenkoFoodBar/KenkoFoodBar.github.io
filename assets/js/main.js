@@ -107,8 +107,8 @@ themeButton.addEventListener('click', () => {
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '1000px',
-    duration: 2000,
+    distance: '800x',
+    duration: 1500,
 });
 
 sr.reveal(`.home__data, .home__img,
