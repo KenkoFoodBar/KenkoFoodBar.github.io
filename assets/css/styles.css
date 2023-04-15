@@ -593,7 +593,7 @@ img{
 }
 
 #loader-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -618,13 +618,14 @@ img{
 }
 
 .loader {
-  position: relative;
+  position: absolute;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin: 75px;
   display: inline-block;
   vertical-align: middle;
+  justify-content: center;
 }
 
 .loader-3 .dot {
