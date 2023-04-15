@@ -602,7 +602,6 @@ img{
   align-items: center;
   z-index: 9999;
   text-align: center; 
-  vertical-align: middle;
 }
 
 #loader {
