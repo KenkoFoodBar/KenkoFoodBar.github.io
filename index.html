@@ -33,6 +33,73 @@
           </div>
         </div>
 
+        <div id="language-menu" class="language-menu">
+            <span class="language-option" id="fr-option" onclick="switchToFrench()">Français</span>
+            <span class="language-option" id="en-option" onclick="switchToEnglish()">English</span>
+          </div>
+          
+          <style>
+            .language-menu {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              background-color: grey;
+            }
+          
+            .language-option {
+              color: white;
+              font-size: 24px;
+              margin-bottom: 10px;
+              cursor: pointer;
+            }
+          
+            .language-option:hover {
+              text-decoration: underline;
+            }
+          </style>
+          
+          <script>
+            function hideMenu() {
+              const menu = document.getElementById('language-menu');
+              menu.style.display = 'none';
+            }
+          
+            function switchToFrench() {
+              fetch('langue.json')
+                .then(response => response.json())
+                .then(data => {
+                  const fr = data.fr;
+                  for (const key in fr) {
+                    const id = key;
+                    const value = fr[key];
+                    document.getElementById(id).textContent = value;
+                  }
+                  hideMenu();
+                });
+            }
+          
+            function switchToEnglish() {
+              fetch('langue.json')
+                .then(response => response.json())
+                .then(data => {
+                  const en = data.en;
+                  for (const key in en) {
+                    const id = key;
+                    const value = en[key];
+                    document.getElementById(id).textContent = value;
+                  }
+                  hideMenu();
+                });
+            }
+          </script>          
+
         <!--========== SCROLL TOP ==========-->
         <a href="#" class="scrolltop" id="scroll-top">
             <i class='bx bx-chevron-up scrolltop__icon'></i>
@@ -45,11 +112,11 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active-link" id="1">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" id="2">A propos</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link" id="3">Services</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link" id="4">Menu</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" id="5">Nous contacter</a></li>
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                     </ul>
@@ -67,8 +134,8 @@
                 <div class="home__container bd-container bd-grid">
                     <div class="home__data">
                         <h1 class="home__title">Kenkō Food Bar</h1>
-                        <h2 class="home__subtitle">Take care of your health</h2>
-                        <a href="#menu" class="button">View Menu</a>
+                        <h2 class="home__subtitle" id="6">Prenez soin de votre santé</h2>
+                        <a href="#menu" class="button" id="7">Voir Menu</a>
                     </div>
     
                     <img src="./assets/img/logo.jpg" alt="" class="home__img">
@@ -79,19 +146,19 @@
             <section class="about section bd-container" id="about">
                 <div class="about__container  bd-grid">
                     <div class="about__data">
-                        <span class="section-subtitle about__initial">About us</span>
-                        <h2 class="section-title about__initial">We cook the best <br> Kenkō Food Bar</h2>
-                        <p class="about__description">We cook the best food in the entire city, with excellent customer service, the best meals and at the best price, visit us.</p>
+                        <span class="section-subtitle about__initial" id="8">A propos de nous</span>
+                        <h2 class="section-title about__initial" id="9">Nourriture saine pour un corps sain<br> Kenkō Food Bar</h2>
+                        <p class="about__description" id="10">Choisissez ce qu'il y a dans votre assiette en composant votre plat ou en testant nos specialites tout en prenant soin de votre corps.</p>
                     </div>
 
-                    <img src="/assets/img/about.jpg" alt="" class="about__img">
+                    <img src="./assets/img/about.jpg" alt="" class="about__img">
                 </div>
             </section>
 
             <!--========== SERVICES ==========-->
             <section class="services section bd-container" id="services">
-                <span class="section-subtitle">Offering</span>
-                <h2 class="section-title">Our amazing services</h2>
+                <span class="section-subtitle" id="11">Ce que nous offrons</span>
+                <h2 class="section-title" id="12">Un service rapide, composez tout droit dans votre assiette grace a notre bar a salade.</h2>
 
                 <div class="services__container  bd-grid">
                     <div class="services__content">
@@ -156,8 +223,8 @@
                             16.8875 47.057C17.3045 47.4744 17.9811 47.4746 18.3984 47.0576C18.8157 
                             46.6405 18.816 45.964 18.3989 45.5466Z"/>
                         </svg>
-                        <h3 class="services__title">Excellent food</h3>
-                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                        <h3 class="services__title" id="13">Une nourriture saine</h3>
+                        <p class="services__description" id="14">Des produits frais fraichement servis dans votre assiette et des ingredients sains.</p>
                     </div>
 
                     <div class="services__content">
@@ -313,8 +380,8 @@
                             </clipPath>
                             </defs>
                         </svg>
-                        <h3 class="services__title">Fast food</h3>
-                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                        <h3 class="services__title" id="15">Fast food</h3>
+                        <p class="services__description" id="16">N'attendez pas longtemps pour etre servis, votre plat et a porte de main.</p>
                     </div>
 
                     <div class="services__content">
@@ -366,193 +433,193 @@
                                 </clipPath>
                                 </defs>
                         </svg>
-                        <h3 class="services__title">Delivery</h3>
-                        <p class="services__description">We offer our clients excellent quality services for many years, with the best and delicious food in the city.</p>
+                        <h3 class="services__title" id="17">Livraison</h3>
+                        <p class="services__description" id="18">Faites aussi connaissance avec notre service de livraison qui vous livre en 30 minutes dans la banlieue.</p>
                     </div>
                 </div>
             </section>
 
             <!--========== MENU ==========-->
             <section class="menu section bd-container" id="menu">
-                <h2 class="section-title">Nos Poke Balls</h2>
-                <span class="section-subtitle">Signature bowl à la base du riz japonais</span>
+                <h2 class="section-title" id="19">Nos Poke Balls</h2>
+                <span class="section-subtitle" id="20">Signature bowl à la base du riz japonais</span>
 
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/1.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Poke bowl au daurade</h3>
-                        <span class="menu__detail">Ceviche de daurade, ananas, gingembre mariné, chou rouge, carotte, concombre, nori, graine de sésame</span>
+                        <h3 class="menu__name" id="21">Poke bowl au daurade</h3>
+                        <span class="menu__detail" id="22">Ceviche de daurade, ananas, gingembre mariné, chou rouge, carotte, concombre, nori, graine de sésame</span>
                         <span class="menu__preci">19,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/2.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Poke bowl au saumon</h3>
-                        <span class="menu__detail">Saumon mariné, avocat, brocoli, gingembre mariné, ananas, chou rouge, radis, nori, graine de sésame</span>
+                        <h3 class="menu__name" id="23">Poke bowl au saumon</h3>
+                        <span class="menu__detail" id="24">Saumon mariné, avocat, brocoli, gingembre mariné, ananas, chou rouge, radis, nori, graine de sésame</span>
                         <span class="menu__preci">24,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Poke Bar</h2>
+                <h2 class="section-title" id="25">Nos Poke Bar</h2>
                 <div class="menu__container bd-grid">
 
                     <div class="menu__content">
                         <img src="./assets/img/3.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Poke bar à base de riz japonais</h3>
-                        <span class="menu__detail">Riz japonais</span>
+                        <h3 class="menu__name" id="26">Poke bar à base de riz japonais</h3>
+                        <span class="menu__detail" id="27">Riz japonais</span>
                         <span class="menu__preci">5,500DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/4.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Poke bar à base de quinoa</h3>
-                        <span class="menu__detail">Quinoa</span>
+                        <h3 class="menu__name" id="28">Poke bar à base de quinoa</h3>
+                        <span class="menu__detail" id="29">Quinoa</span>
                         <span class="menu__preci">7,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Bibimbap</h2>
-                <span class="section-subtitle">Un incontournable de la cuisine coréenne</span>
+                <h2 class="section-title" id="30">Nos Bibimbap</h2>
+                <span class="section-subtitle" id="31">Un incontournable de la cuisine coréenne</span>
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/5.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Bibimbap végétarien</h3>
-                        <span class="menu__detail">Tofu, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
+                        <h3 class="menu__name" id="32">Bibimbap végétarien</h3>
+                        <span class="menu__detail" id="33">Tofu, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
                         <span class="menu__preci">22,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/6.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Bibimbap au poulet</h3>
-                        <span class="menu__detail">Poulet mariné au soja, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
+                        <h3 class="menu__name" id="34">Bibimbap au poulet</h3>
+                        <span class="menu__detail" id="35">Poulet mariné au soja, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
                         <span class="menu__preci">23,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/7.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Bibimbap au bœuf</h3>
-                        <span class="menu__detail">Bœuf mariné au soja, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
+                        <h3 class="menu__name" id="36">Bibimbap au bœuf</h3>
+                        <span class="menu__detail" id="37">Bœuf mariné au soja, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne. Servi avec une sauce pimentée maison.</span>
                         <span class="menu__preci">26,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/8.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Bibimbap aux calamars</h3>
-                        <span class="menu__detail">Calamars épicés, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne.Servi avec une sauce pimentée maison.</span>
+                        <h3 class="menu__name" id="38">Bibimbap aux calamars</h3>
+                        <span class="menu__detail" id="39">Calamars épicés, champignons, carotte, courgette, épinards, poivron, oignons caramélisés, œuf confit, riz à la coréenne.Servi avec une sauce pimentée maison.</span>
                         <span class="menu__preci">27,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Nouilles Yakisoba</h2>
+                <h2 class="section-title" id="40">Nos Nouilles Yakisoba</h2>
                 <div class="menu__container bd-grid">
 
                     <div class="menu__content">
                         <img src="./assets/img/9.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Yakisoba végétarienne</h3>
-                        <span class="menu__detail">Servi avec des légumes croquants au wok</span>
+                        <h3 class="menu__name" id="41">Yakisoba végétarienne</h3>
+                        <span class="menu__detail" id="42">Servi avec des légumes croquants au wok</span>
                         <span class="menu__preci">22,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/10.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Yakisoba au poulet</h3>
-                        <span class="menu__detail">Servi avec des légumes croquants au wok</span>
+                        <h3 class="menu__name" id="43">Yakisoba au poulet</h3>
+                        <span class="menu__detail" id="44">Servi avec des légumes croquants au wok</span>
                         <span class="menu__preci">24,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/11.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Yakisoba au bœuf</h3>
-                        <span class="menu__detail">Servi avec des légumes croquants au wok</span>
+                        <h3 class="menu__name" id="45">Yakisoba au bœuf</h3>
+                        <span class="menu__detail" id="46">Servi avec des légumes croquants au wok</span>
                         <span class="menu__preci">27,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/12.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Yakisoba au saumon</h3>
-                        <span class="menu__detail">Servi avec des légumes croquants au wok</span>
+                        <h3 class="menu__name" id="47">Yakisoba au saumon</h3>
+                        <span class="menu__detail" id="48">Servi avec des légumes croquants au wok</span>
                         <span class="menu__preci">30,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Kenko Appetizers</h2>
+                <h2 class="section-title" id="49">Nos Kenko Appetizers</h2>
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/13.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Tartare de saumon à l’aneth</h3>
-                        <span class="menu__detail">Saumon, quinoa rouge et noir, avocat,<br> graine de sésame wasabi, crème d’avocat , sauce aux fines herbes</span>
+                        <h3 class="menu__name" id="50">Tartare de saumon à l’aneth</h3>
+                        <span class="menu__detail" id="51">Saumon, quinoa rouge et noir, avocat,<br> graine de sésame wasabi, crème d’avocat , sauce aux fines herbes</span>
                         <span class="menu__preci">21,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Signature Salads</h2>
+                <h2 class="section-title" id="52">Nos Signature Salads</h2>
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/14.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Salade quinoa</h3>
-                        <span class="menu__detail">Quinoa rouge et noir, tomate cerise, roquette, choux, haricot vert, fruit de saison, sauce légère au citron</span>
+                        <h3 class="menu__name" id="53">Salade quinoa</h3>
+                        <span class="menu__detail" id="54">Quinoa rouge et noir, tomate cerise, roquette, choux, haricot vert, fruit de saison, sauce légère au citron</span>
                         <span class="menu__preci">17,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/15.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Salade estivale</h3>
-                        <span class="menu__detail">Laitue, tomate cerise, brocoli, aubergine, chou rouge, ananas, lentille, mozzarella, vinaigrette yuzu</span>
+                        <h3 class="menu__name" id="55">Salade estivale</h3>
+                        <span class="menu__detail" id="56">Laitue, tomate cerise, brocoli, aubergine, chou rouge, ananas, lentille, mozzarella, vinaigrette yuzu</span>
                         <span class="menu__preci">17,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/16.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Salade de riz</h3>
-                        <span class="menu__detail">Riz basmati, thon, œuf, tomate cerise, mais, petit pois, olives vertes, sauce légère au citron</span>
+                        <h3 class="menu__name" id="57">Salade de riz</h3>
+                        <span class="menu__detail" id="58">Riz basmati, thon, œuf, tomate cerise, mais, petit pois, olives vertes, sauce légère au citron</span>
                         <span class="menu__preci">13,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/17.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Salade de pois chiche</h3>
-                        <span class="menu__detail">Feta, pois chiche, concombre, radis, tomate cerise, oignons, grenade, vinaigrette classique,</span>
+                        <h3 class="menu__name" id="59">Salade de pois chiche</h3>
+                        <span class="menu__detail" id="60">Feta, pois chiche, concombre, radis, tomate cerise, oignons, grenade, vinaigrette classique,</span>
                         <span class="menu__preci">11,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Notre Bar a Salade</h2>
+                <h2 class="section-title" id="61">Notre Bar a Salade</h2>
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/18.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Composez votre salade</h3>
+                        <h3 class="menu__name" id="62">Composez votre salade</h3>
                         <span class="menu__detail"></span>
                         <span class="menu__preci">3,800DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/19.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Salade à base de quinoa</h3>
+                        <h3 class="menu__name" id="63">Salade à base de quinoa</h3>
                         <span class="menu__detail"></span>
                         <span class="menu__preci">7,000DT</span>
                      </div>
                 </div>
                 <br>
-                <h2 class="section-title">Nos Gyozas</h2>
+                <h2 class="section-title" id="64">Nos Gyozas</h2>
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
                         <img src="./assets/img/20.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Gyoza végan</h3>
-                        <span class="menu__detail">4 pièces</span>
+                        <h3 class="menu__name" id="65">Gyoza végan</h3>
+                        <span class="menu__detail" id="66">4 pièces</span>
                         <span class="menu__preci">11,500DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/20.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Gyoza au bœuf</h3>
-                        <span class="menu__detail">4 pièces</span>
+                        <h3 class="menu__name" id="67">Gyoza au bœuf</h3>
+                        <span class="menu__detail" id="68">4 pièces</span>
                         <span class="menu__preci">13,000DT</span>
                      </div>
 
                     <div class="menu__content">
                         <img src="./assets/img/20.jpg" alt="" class="menu__img">
-                        <h3 class="menu__name">Gyoza bœuf fromage</h3>
-                        <span class="menu__detail">4 pièces</span>
+                        <h3 class="menu__name" id="69">Gyoza bœuf fromage</h3>
+                        <span class="menu__detail" id="70">4 pièces</span>
                         <span class="menu__preci">14,000DT</span>
                      </div>
                 </div>
@@ -562,24 +629,24 @@
             <section class="contact section bd-container" id="contact">
                 <div class="contact__container bd-grid_2">
                     <div class="contact__data">
-                        <span class="section-subtitle contact__initial">Let's talk</span>
-                        <h2 class="section-title contact__initial">Contact us</h2>
-                        <p class="contact__description">If you want to reserve a table in our restaurant, contact us and we will attend you quickly, with our 24/7 chat service.</p>
+                        <span class="section-subtitle contact__initial" id="71">Passer le cap</span>
+                        <h2 class="section-title contact__initial" id="72">Contacter nous</h2>
+                        <p class="contact__description" id="73">Si vous souhaitez reserver une table dans notre restaurant, contactez nous dans nos horaires d'ouverture.</p>
                     </div>
 
                     <div class="contact__button">
-                        <a href="tel:24637637" class="button">Contact us now</a>
+                        <a href="tel:24637637" class="button" id="74">Nous contacter</a>
                     </div>
                 </div>
 
                 <div class="contact__container bd-grid_2">
                     <div class="contact__data">
-                        <h2 class="section-title contact__initial">Take a Delivery</h2>
-                        <p class="contact__description">We will be here in 35-45 minutes</p>
+                        <h2 class="section-title contact__initial" id="75">Livraison</h2>
+                        <p class="contact__description" id="76">Nous serons la en 35-45 minutes</p>
                     </div>
 
                     <div class="contact__button">
-                        <a href="https://food.jumia.com.tn/restaurant/w3hn/kenko-food-bar?atlas_city_id=2307131&latitude=36.9247285&longitude=10.2744313" class="button">Order now</a>
+                        <a href="https://food.jumia.com.tn/restaurant/w3hn/kenko-food-bar?atlas_city_id=2307131&latitude=36.9247285&longitude=10.2744313" class="button" id="77">Commander maintenant</a>
                     </div>
                 </div>
             </section>
@@ -590,14 +657,14 @@
             <div class="footer__container bd-grid_2">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">Kenko Food</a>
-                    <span class="footer__description">Horaires</span>
-                    <span class="footer__description">dimanche Fermé</span>
-                    <span class="footer__description">lundi 11:30–22:00</span>
-                    <span class="footer__description">mardi 11:30–22:00</span>
-                    <span class="footer__description">mercredi 11:30–22:00</span>
-                    <span class="footer__description">jeudi 11:30–22:00</span>
-                    <span class="footer__description">vendredi 11:30–22:00</span>
-                    <span class="footer__description">samedi 11:30–22:00</span>
+                    <span class="footer__description" id="78">Horaires</span>
+                    <span class="footer__description" id="79">dimanche Fermé</span>
+                    <span class="footer__description" id="80">lundi 11:30–22:00</span>
+                    <span class="footer__description" id="81">mardi 11:30–22:00</span>
+                    <span class="footer__description" id="82">mercredi 11:30–22:00</span>
+                    <span class="footer__description" id="83">jeudi 11:30–22:00</span>
+                    <span class="footer__description" id="84">vendredi 11:30–22:00</span>
+                    <span class="footer__description" id="85">samedi 11:30–22:00</span>
 
 
                     <div>
@@ -609,17 +676,17 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Services</h3>
                     <ul>
-                        <li><a href="#contact" class="footer__link">Delivery</a></li>
-                        <li><a href="#menu" class="footer__link">Pricing</a></li>
-                        <li><a href="#services" class="footer__link">Fast food</a></li>
-                        <li><a href="#contact" class="footer__link">Reserve your spot</a></li>
+                        <li><a href="#contact" class="footer__link">Commander</a></li>
+                        <li><a href="#menu" class="footer__link">Prix</a></li>
+                        <li><a href="#services" class="footer__link">Nos services</a></li>
+                        <li><a href="#contact" class="footer__link">Reserver</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__content">
                     <h3 class="footer__title">Information</h3>
                     <ul>
-                        <li><a href="#contact" class="footer__link">Contact us</a></li>
+                        <li><a href="#contact" class="footer__link">Nous contacter</a></li>
                         <li><a href="#" class="footer__link">Privacy policy</a></li>
                         <li><a href="#" class="footer__link">Terms of services</a></li>
                     </ul>
