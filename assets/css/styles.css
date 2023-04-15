@@ -625,6 +625,7 @@ img{
   display: inline-block;
   vertical-align: middle;
   justify-content: center;
+  text-align: center; /* ajout de cette propriété */
 }
 
 .loader-3 .dot {
@@ -637,19 +638,19 @@ img{
 }
 
 .loader-3 .dot1 {
-  left: 0px;
+  left: 0;
   -webkit-animation: dot-jump 0.5s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
   animation: dot-jump 0.5s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
 }
 
 .loader-3 .dot2 {
-  left: 20px;
+  left: 50%;
   -webkit-animation: dot-jump 0.5s 0.2s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
   animation: dot-jump 0.5s 0.2s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
 }
 
 .loader-3 .dot3 {
-  left: 40px;
+  left: 100%;
   -webkit-animation: dot-jump 0.5s 0.4s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
   animation: dot-jump 0.5s 0.4s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
 }
