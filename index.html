@@ -120,6 +120,20 @@
                   hideMenu();
                 });
             }
+            
+            function switchToArabic(){
+                fetch('langue.json')
+                .then(response => response.json())
+                .then(data => {
+                  const ar = data.ar;
+                  for (const key in ar) {
+                    const id = key;
+                    const value = ar[key];
+                    document.getElementById(id).textContent = value;
+                  }
+                  hideMenu();
+                });
+            }
 
             function switchToEnglish() {
               fetch('langue.json')
@@ -134,45 +148,12 @@
                   hideMenu();
                 });
             }
-            function switchLang(lang) {
-              fetch('langue.json')
-                .then(response => response.json())
-                .then(data => {
-                  if (lang === 'fr') {
-                    const fr = data.fr;
-                    for (const key in fr) {
-                      const id = key;
-                      const value = fr[key];
-                      document.getElementById(id).textContent = value;
-                    }
-                  } else if (lang === 'en') {
-                    const en = data.en;
-                    for (const key in en) {
-                      const id = key;
-                      const value = en[key];
-                      document.getElementById(id).textContent = value;
-                    }
-                  }
-                });
-              document.getElementById('dropdown-content').classList.toggle('show');
-            }
-
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName('dropdown-content');
-                let i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  const openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
-            }
         </script>
         <div id="language-menu" class="language-menu">
             <span class="language-option" id="fr-option" onclick="switchToFrench()">Français</span>
             <span class="language-option" id="en-option" onclick="switchToEnglish()">English</span>
+            <span class="language-option" id="ar-option" onclick="switchToArabic()">عربي</span>
+            
           </div>
         
         <!--========== SCROLL TOP ==========-->
