@@ -129,16 +129,17 @@
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                         <li>
-                          <div class="language-dropdown">
-                            <button class="language-dropdown__button">
-                              <img class="language-dropdown__icon" src="./assets/img/internet.png" alt="Language Icon">
-                              <span class="language-dropdown__label">English</span>
-                            </button>
-                            <ul class="language-dropdown__list">
-                              <li><button class="language-dropdown__option" data-lang="en">English</button></li>
-                              <li><button class="language-dropdown__option" data-lang="fr">Français</button></li>
-                            </ul>
+                          <div class="dropdown">
+                          <button class="dropbtn">
+                            <img src="language-icon.svg" alt="Language Icon" class="icon">
+                            <span class="lang">Langue</span>
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-content">
+                            <a href="#" id="fr" onclick="switchLang('fr')">Français</a>
+                            <a href="#" id="en" onclick="switchLang('en')">English</a>
                           </div>
+                        </div>
                         </li>
                     </ul>
                 </div>
