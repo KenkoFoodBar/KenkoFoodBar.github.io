@@ -13,9 +13,9 @@
   --text-color-light: #A6A6A6;
   --body-color: #FBFEFD;
   --container-color: #FFFFFF;
-  --dropbtn: #202020;
+  --dropbtn: #022A3A;
   --dropdown-content: #f9f9f9;
-  --dropdown-content-a: #202020;
+  --dropdown-content-a: #022A3A;
   
 
   /*========== Font and typography ==========*/
@@ -73,9 +73,9 @@ body.dark-theme{
   --text-color: #7191b8;
   --body-color: #1D2521;
   --container-color: #27302C;
-  --dropbtn: #FFFFFF;
+  --dropbtn: #7191b8;
   --dropdown-content: #202020;
-  --dropdown-content-a: #FFFFFF;
+  --dropdown-content-a: #7191b8;
 }
 
 /*========== Button Dark/Light ==========*/
