@@ -659,7 +659,8 @@ img{
 
 .dropbtn {
   color: var(--dropbtn);
-  margin-left: 5%
+  margin-left: 5%;
+  position:relative;
   cursor: pointer;
   width: 1rem;
   height: 1rem;
