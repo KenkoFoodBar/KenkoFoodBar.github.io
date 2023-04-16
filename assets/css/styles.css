@@ -660,6 +660,7 @@ img{
 .dropdown .dropbtn {
   background-color: transparent;
   color: var(--dropbtn);
+  margin-left: 5%
   cursor: pointer;
   width: 1rem;
   height: 1rem;
