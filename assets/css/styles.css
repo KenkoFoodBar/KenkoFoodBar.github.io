@@ -651,22 +651,19 @@ img{
 }
 
 .language-menu {
-  display: flex;
-  text-decoration: none;
+  position: fixed;
   top: 50%;
   left: 50%;
-  position: fixed;
-  flex-direction: column;
-  left: 0;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: #292929;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  text-align: center; 
+  flex-direction: column;
+  background-color: grey;
 }
-          
+
 .language-option {
   color: white;
   font-size: 24px;
