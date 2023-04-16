@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="nPcmwDTaiqHeVT4_ZkLpEtJvECSvHtingf8IO-r5iQw" />
+    <meta name="keywords" content="kenkō food bar, poke bar, bœuf, riz japonais, asiatique, vegan, food, bar, food bar, kenko, kenko food, salade, poke, services, bibimbap, yakisoba, kenkō, quinoa, delivery, riz, saumon, bowl, fast food, street food, healthy, cook, signature, légumes, fast, bar à salade, sushi, maki, ramen, teriyaki, tempura, gyoza, soupe miso, udon, soba, yakitori, donburi, tofu, edamame, wasabi, sashimi, nori, sésame, matcha, thé vert, sésame noir, avocat, thon, saumon, crevettes, poulpe, anguille, crabe, sauce soja, sauce ponzu, gingembre, ail, oignon vert, huile de chili, vinaigre de riz, mirin, sake, vin de prune, yuzu, katsu, okonomiyaki, takoyaki, mochi, latte matcha, bubble tea, smoothies, jus, eau de coco, bols açai, bols de quinoa, bols de protéines">
+
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://scontent.fnbe1-2.fna.fbcdn.net/v/t1.6435-9/82295364_107637397446969_6042127337376448512_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=eEnimU4CfrwAX_NTaYJ&_nc_ht=scontent.fnbe1-2.fna&oh=00_AfAxw2FXxjp8gWEU5CuOraeFSJIvSiSPkYx9eEV5xU4O2g&oe=64511AF6" rel="icon" type="image/png" >
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Kenko Food Bar | Booking</title>
+</head>
+<body>
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Kenkō</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" id="1">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" id="2">A propos</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link" id="3">Services</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link" id="4">Menu</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" id="5">Nous contacter</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    <li class="dropdown">
+                          <button class="dropbtn" onclick="myFunction()" id="lgd">EN</button>
+                          <div class="dropdown-content" id="myDropdown">
+                            <a class="language-option" id="fr-option" onclick="switchToFrench()">Français</a>
+                            <a class="language-option" id="en-option" onclick="switchToEnglish()">English</a>
+                            <a class="language-option" id="ar-option" onclick="switchToArabic()">عربي</a>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+        <center>
+            <div>
+                <script src="https://app.wotnot.io/chat-widget/6QDfMgxJVPaU210148584406S3fUTrVD.js" defer></script>
+            </div>
+        </center>
+    </main>
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid_2">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Kenko Food</a>
+                <span class="footer__description" id="78">Horaires</span>
+                <span class="footer__description" id="79">dimanche Fermé</span>
+                <span class="footer__description" id="80">lundi 11:30–22:00</span>
+                <span class="footer__description" id="81">mardi 11:30–22:00</span>
+                <span class="footer__description" id="82">mercredi 11:30–22:00</span>
+                <span class="footer__description" id="83">jeudi 11:30–22:00</span>
+                <span class="footer__description" id="84">vendredi 11:30–22:00</span>
+                <span class="footer__description" id="85">samedi 11:30–22:00</span>
+
+
+                <div>
+                    <a href="https://www.facebook.com/kenko.foodbar/" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/kenko_foodbar/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title" id="95">Services</h3>
+                <ul>
+                    <li><a href="#contact" class="footer__link" id="86">Commander</a></li>
+                    <li><a href="#menu" class="footer__link" id="87">Prix</a></li>
+                    <li><a href="#services" class="footer__link" id="88">Nos services</a></li>
+                    <li><a href="#contact" class="footer__link" id="89">Reserver</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title" id="90">Information</h3>
+                <ul>
+                    <li><a href="#contact" class="footer__link" id="91">Nous contacter</a></li>
+                    <li><a href="#" class="footer__link" id="92">Politique de confidentialité</a></li>
+                    <li><a href="#" class="footer__link" id="93">Conditions d'utilisation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title" id="94">Adresse</h3>
+                <ul>
+                    <li>La Marsa - Tunisia</li>
+                    <li>Plage Rocheuse de Sidi Bou Said, Rue des Hafsides, Marsa 2070</li>
+                    <li>+216 24637637</li>
+                    <li>kenko.foodbar@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2023 H&H. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
