@@ -38,33 +38,6 @@
             <span class="language-option" id="en-option" onclick="switchToEnglish()">English</span>
           </div>
           
-          <style>
-            .language-menu {
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-direction: column;
-              background-color: grey;
-            }
-          
-            .language-option {
-              color: white;
-              font-size: 24px;
-              margin-bottom: 10px;
-              cursor: pointer;
-            }
-          
-            .language-option:hover {
-              text-decoration: underline;
-            }
-          </style>
-          
           <script>
             function hideMenu() {
               const menu = document.getElementById('language-menu');
@@ -119,6 +92,18 @@
                         <li class="nav__item"><a href="#contact" class="nav__link" id="5">Nous contacter</a></li>
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                        <li>
+                          <div class="language-dropdown">
+                            <button class="language-dropdown__button">
+                              <img class="language-dropdown__icon" src="./assets/img/internet.png" alt="Language Icon">
+                              <span class="language-dropdown__label">English</span>
+                            </button>
+                            <ul class="language-dropdown__list">
+                              <li><button class="language-dropdown__option" data-lang="en">English</button></li>
+                              <li><button class="language-dropdown__option" data-lang="fr">Français</button></li>
+                            </ul>
+                          </div>
+                        </li>
                     </ul>
                 </div>
 
