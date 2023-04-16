@@ -95,9 +95,7 @@
       "92": "Politique de confidentialité",
       "93": "Conditions d'utilisation",
       "90": "Information",
-      "94": "Adresse",
-      "95": "Telephone",
-      "96": "Mail"
+      "94": "Adresse"
     },
     
     "en": {
@@ -196,9 +194,7 @@
       "92": "Privacy policy",
       "93": "Terms of use",
       "90": "Information",
-      "94": "Address",
-      "95": "Phone",
-      "96": "Mail"
+      "94": "Address"
     },
     "ar": {
       "lgd": "AR",
@@ -296,8 +292,6 @@
       "92": "سياسة الخصوصية",
       "93": "شروط الاستخدام",
       "90": "معلومات",
-      "94": "عنوان",
-      "95": "الهاتف",
-      "96": "البريد الإلكتروني"
+      "94": "عنوان"
     }
 }
