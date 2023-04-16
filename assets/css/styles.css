@@ -657,13 +657,8 @@ img{
   animation: dot-jump 0.5s 0.4s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
 }
 
- .dropdown {
-  float: left;
-}
-
 .dropdown .dropbtn {
   color: var(--dropbtn);
-  background-color: transparent; 
   cursor: pointer;
   width: 1rem;
   height: 1rem;
