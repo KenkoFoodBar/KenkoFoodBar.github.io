@@ -39,74 +39,7 @@
           </div>
           
           <script>
-            function hideMenu() {
-              const menu = document.getElementById('language-menu');
-              menu.style.display = 'none';
-            }
-          
-            function switchToFrench() {
-              fetch('langue.json')
-                .then(response => response.json())
-                .then(data => {
-                  const fr = data.fr;
-                  for (const key in fr) {
-                    const id = key;
-                    const value = fr[key];
-                    document.getElementById(id).textContent = value;
-                  }
-                  hideMenu();
-                });
-            }
-          
-            function switchToEnglish() {
-              fetch('langue.json')
-                .then(response => response.json())
-                .then(data => {
-                  const en = data.en;
-                  for (const key in en) {
-                    const id = key;
-                    const value = en[key];
-                    document.getElementById(id).textContent = value;
-                  }
-                  hideMenu();
-                });
-            }
-            function switchLang(lang) {
-              fetch('langue.json')
-                .then(response => response.json())
-                .then(data => {
-                  if (lang === 'fr') {
-                    const fr = data.fr;
-                    for (const key in fr) {
-                      const id = key;
-                      const value = fr[key];
-                      document.getElementById(id).textContent = value;
-                    }
-                  } else if (lang === 'en') {
-                    const en = data.en;
-                    for (const key in en) {
-                      const id = key;
-                      const value = en[key];
-                      document.getElementById(id).textContent = value;
-                    }
-                  }
-                });
-              document.getElementById('dropdown-content').classList.toggle('show');
-            }
-
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName('dropdown-content');
-                let i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  const openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
-            }
-
+           
           </script>          
 
         <!--========== SCROLL TOP ==========-->
