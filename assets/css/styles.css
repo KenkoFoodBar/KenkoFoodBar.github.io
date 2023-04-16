@@ -13,6 +13,10 @@
   --text-color-light: #A6A6A6;
   --body-color: #FBFEFD;
   --container-color: #FFFFFF;
+  --dropbtn: #202020;
+  --dropdown-content: #f9f9f9;
+  --dropdown-content-a: #202020;
+  
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -69,34 +73,9 @@ body.dark-theme{
   --text-color: #7191b8;
   --body-color: #1D2521;
   --container-color: #27302C;
-  .dropdown .dropbtn {
-    color: white;
-    background-color: transparent; 
-    cursor: pointer;
-    width: 1rem;
-    border: none;
-    outline: none;
-    padding: 14px 16px;
-    margin: 0;
-  }
-   .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #202020;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      float: none;
-      padding: 12px 16px;
-      font-size: 70%;
-      color: white;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
+  --dropbtn: #FFFFFF;
+  --dropdown-content: #202020;
+  --dropdown-content-a: #FFFFFF;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -676,6 +655,45 @@ img{
   left: 100%;
   -webkit-animation: dot-jump 0.5s 0.4s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
   animation: dot-jump 0.5s 0.4s cubic-bezier(0.77, 0.47, 0.64, 0.28) alternate infinite;
+}
+
+ .dropdown {
+  float: left;
+}
+
+.dropdown .dropbtn {
+  color: var(--dropbtn);
+  background-color: transparent; 
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-content);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 12px 16px;
+  font-size: 70%;
+  color: var(--dropdown-content-a);
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.show {
+  display: block;
 }
 
 /* Keyframes */
