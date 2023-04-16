@@ -69,6 +69,34 @@ body.dark-theme{
   --text-color: #7191b8;
   --body-color: #1D2521;
   --container-color: #27302C;
+  .dropdown .dropbtn {
+    color: white;
+    background-color: transparent; 
+    cursor: pointer;
+    width: 1rem;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    margin: 0;
+  }
+   .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #202020;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      padding: 12px 16px;
+      font-size: 70%;
+      color: white;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
 }
 
 /*========== Button Dark/Light ==========*/
