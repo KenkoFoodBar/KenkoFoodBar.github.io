@@ -119,3 +119,33 @@ sr.reveal(`.home__data, .home__img,
             .footer__content`, {
     interval: 200
 })
+
+const dropdownButton = document.querySelector('.language-dropdown__button');
+const dropdownList = document.querySelector('.language-dropdown__list');
+const dropdownOptions = document.querySelectorAll('.language-dropdown__option');
+
+dropdownButton.addEventListener('click', () => {
+  dropdownList.classList.toggle('active');
+});
+
+dropdownOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    const lang = option.dataset.lang;
+    setActiveLanguage(lang);
+    dropdownList.classList.remove('active');
+  });
+});
+
+function setActiveLanguage(lang) {
+  const activeOption = document.querySelector('.language-dropdown__option.active');
+  if (activeOption) {
+    activeOption.classList.remove('active');
+  }
+  const newActiveOption = document.querySelector(`.language-dropdown__option[data-lang="${lang}"]`);
+  newActiveOption.classList.add('active');
+  if (lang === 'en') {
+    // appel à la fonction pour afficher les textes en anglais
+  } else if (lang === 'fr') {
+    // appel à la fonction pour afficher les textes en français
+  }
+}
