@@ -32,16 +32,16 @@
                     z-index: 128; /* Set a high z-index value */
                 }
             
-               .language-option {
-                  color: white;
-                  font-size: 24px;
-                  margin-bottom: 10px;
-                  cursor: pointer;
-                }
+           .language-option {
+              color: white;
+              font-size: 24px;
+              margin-bottom: 10px;
+              cursor: pointer;
+            }
 
-                .language-option:hover {
-                  text-decoration: underline;
-                }
+            .language-option:hover {
+              text-decoration: underline;
+            }
         </style>
         <script>
             /* When the user clicks on the button, 
@@ -59,11 +59,7 @@
                 }
               }
             }
-            function hideMenu() {
-              const menu = document.getElementById('language-menu');
-              menu.style.display = 'none';
-            }
-
+            
             function switchToFrench() {
               fetch('langue.json')
                 .then(response => response.json())
@@ -74,7 +70,6 @@
                     const value = fr[key];
                     document.getElementById(id).textContent = value;
                   }
-                  hideMenu();
                   myDropdown.classList.remove('show');
                 });
             }
@@ -89,7 +84,6 @@
                     const value = ar[key];
                     document.getElementById(id).textContent = value;
                   }
-                  hideMenu();
                   myDropdown.classList.remove('show');
                 });
             }
@@ -104,7 +98,6 @@
                     const value = en[key];
                     document.getElementById(id).textContent = value;
                   }
-                  hideMenu();
                   myDropdown.classList.remove('show');
                 });
             }
@@ -124,7 +117,7 @@
 
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                     <li class="dropdown">
-                          <button class="dropbtn" onclick="myFunction()" id="lgd">EN</button>
+                          <button class="dropbtn" onclick="myFunction()" id="lgd"></button>
                           <div class="dropdown-content" id="myDropdown">
                             <a class="language-option" id="fr-option" onclick="switchToFrench()">Français</a>
                             <a class="language-option" id="en-option" onclick="switchToEnglish()">English</a>
@@ -144,7 +137,7 @@
         <center>
             <div>
                 <script src="https://app.wotnot.io/chat-widget/6QDfMgxJVPaU210148584406S3fUTrVD.js" defer></script>
-                <iframe width="640" height="680" src="https://embed.wotnot.io/6QDfMgxJVPaU210148584406S3fUTrVD/bot/5ucPRt7rcKtV2102252724969ZwM7DRD?display_header=false&history_retention=false" frameborder="0"></iframe>
+                <iframe width="200%" height="280%" src="https://embed.wotnot.io/6QDfMgxJVPaU210148584406S3fUTrVD/bot/5ucPRt7rcKtV2102252724969ZwM7DRD?display_header=false&history_retention=false" frameborder="0"></iframe>
             </div>
             <br><br>
             <div class="contact__button">
