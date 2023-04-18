@@ -71,6 +71,9 @@
                     document.getElementById(id).textContent = value;
                   }
                   myDropdown.classList.remove('show');
+                  document.getElementById("fr-chat").classlist.remove('fr-chat');
+                  document.getElementById("en-chat").classlist.toggle('en-chat');
+                  document.getElementById("ar-chat").classlist.toggle('ar-chat');
                 });
             }
             
@@ -85,6 +88,9 @@
                     document.getElementById(id).textContent = value;
                   }
                   myDropdown.classList.remove('show');
+                  document.getElementById("ar-chat").classlist.remove('ar-chat');
+                  document.getElementById("fr-chat").classlist.toggle('fr-chat');
+                  document.getElementById("en-chat").classlist.toggle('en-chat');
                 });
             }
 
@@ -98,6 +104,9 @@
                     const value = en[key];
                     document.getElementById(id).textContent = value;
                   }
+                  document.getElementById("en-chat").classlist.remove('en-chat');
+                  document.getElementById("fr-chat").classlist.toggle('fr-chat');
+                  document.getElementById("ar-chat").classlist.toggle('ar-chat');
                   myDropdown.classList.remove('show');
                 });
             }
