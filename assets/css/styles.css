@@ -693,6 +693,21 @@ img{
   display: block;
 }
 
+.fr-chat {
+  position: absolute;
+  visibility: hidden;
+}
+
+.en-chat {
+  position: absolute;
+  visibility: hidden;
+}
+
+.ar-chat {
+  position: absolute;
+  visibility: hidden;
+}
+
 /* Keyframes */
 @-webkit-keyframes dot-jump {
   0% {
