@@ -485,8 +485,8 @@ img{
 }
 
 .fr-chat {
-  position: absolute;
-  visibility: hidden;
+  position: relative;
+  visibility: visible;
 }
 
 .en-chat {
