@@ -57,6 +57,8 @@
                   }
                   document.getElementById("fr-chat").style.visibilty = 'visible';
                   document.getElementById("fr-chat").style.position = 'relative';
+                  document.getElementById("en-chat").style.position = 'absolute';
+                  document.getElementById("ar-chat").style.position = 'absolute';
                   document.getElementById("en-chat").style.visibilty = 'hidden';
                   document.getElementById("ar-chat").style.visibilty = 'hidden';
                   myDropdown.classList.remove('show');
@@ -77,6 +79,8 @@
                   document.getElementById("ar-chat").style.position = 'relative';
                   document.getElementById("fr-chat").style.visibilty = 'hidden';
                   document.getElementById("en-chat").style.visibilty = 'hidden';
+                  document.getElementById("en-chat").style.position = 'absolute';
+                  document.getElementById("fr-chat").style.position = 'absolute';
                   myDropdown.classList.remove('show');
                 });
             }
@@ -95,6 +99,8 @@
                   document.getElementById("en-chat").style.position = 'relative';
                   document.getElementById("fr-chat").style.visibilty = 'hidden';
                   document.getElementById("ar-chat").style.visibilty = 'hidden';
+                  document.getElementById("ar-chat").style.position = 'absolute';
+                  document.gwtElementById("fr-chat").style.position = 'absolute';
                   myDropdown.classList.remove('show');
                 });
             }
