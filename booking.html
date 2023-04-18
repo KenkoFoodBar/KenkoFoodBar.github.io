@@ -46,6 +46,11 @@
               }
             }
             
+            const francais = document.getElementById('fr-chat');
+            const anglais = document.getElementById('en-chat');
+            const arabe = document.getElementById('ar-chat');
+            
+            
             function switchToFrench() {
               fetch('langue-booking.json')
                 .then(response => response.json())
@@ -56,12 +61,12 @@
                     const value = fr[key];
                     document.getElementById(id).textContent = value;
                   }
-                  document.getElementById("fr-chat").style.visibilty = 'visible';
-                  document.getElementById("fr-chat").style.position = 'relative';
-                  document.getElementById("en-chat").style.position = 'absolute';
-                  document.getElementById("ar-chat").style.position = 'absolute';
-                  document.getElementById("en-chat").style.visibilty = 'hidden';
-                  document.getElementById("ar-chat").style.visibilty = 'hidden';
+                  francais.style.visibilty = 'visible';
+                  francais.style.position = 'relative';
+                  anglais.style.position = 'absolute';
+                  anglais.style.visibilty = 'hidden';
+                  arabe.style.position = 'absolute';
+                  arabe.style.visibilty = 'hidden';
                   myDropdown.classList.remove('show');
                 });
             }
